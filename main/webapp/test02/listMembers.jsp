@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+	import = "java.util.*, First.test01.*"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -56,11 +57,7 @@
 				</c:forEach>
 			</c:when>
 		</c:choose>
-	</table>
-	
-	<a href="${contextPath}/member/memberForm.do">
-	<p class="cls2">회원 가입하기</p>
-	</a>
-
+	   </table>  
+ <a href="${contextPath}/member/memberForm.do"><p class="cls2">회원 가입하기</p></a>
 </body>
 </html>
