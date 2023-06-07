@@ -9,8 +9,8 @@ public class BoardService {
 		boardDAO = new BoardDAO();
 	}
 	
-	public void addArticle(ArticleVO article) {
-		boardDAO.insertNewArticle(article);
+	public int addArticle(ArticleVO article) {
+		return boardDAO.insertNewArticle(article);
 	}
 	
 	public List<ArticleVO> listArticles(){

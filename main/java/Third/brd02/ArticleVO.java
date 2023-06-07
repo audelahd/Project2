@@ -72,23 +72,25 @@ public class ArticleVO {
 	}
 
 	public String getImageFileName() {
-		try {
-			if(imageFileName != null && imageFileName.length()!=0) {
-				imageFileName = URLDecoder.decode(imageFileName,"UTF-8");
-			}
-		}catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			if(imageFileName != null && imageFileName.length()!=0) {
+//				imageFileName = URLDecoder.decode(imageFileName,"UTF-8");
+//			}
+//		}catch (UnsupportedEncodingException e) {
+//			e.printStackTrace();
+//		}
+//		return imageFileName;
 		return imageFileName;
 	}
 
 	public void setImageFileName(String imageFileName) {
-		try {
-			this.imageFileName=URLEncoder.encode(imageFileName, "UTF-8");
-			
-		}catch(UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			this.imageFileName=URLEncoder.encode(imageFileName, "UTF-8");
+//			
+//		}catch(UnsupportedEncodingException e) {
+//			e.printStackTrace();
+//		}
+		this.imageFileName=imageFileName;
 	}
 
 	public String getId() {

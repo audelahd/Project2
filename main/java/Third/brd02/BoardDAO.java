@@ -29,7 +29,7 @@ public class BoardDAO {
 	}
 	
 	public List<ArticleVO> selectAllArticles(){
-		List<ArticleVO> articlesList = new ArrayList();
+		List<ArticleVO> articlesList = new ArrayList<ArticleVO>();
 		try {
 			conn = dataFactory.getConnection();
 			String query = "SELECT LEVEL, articleNO, parentNO, title, content, id, writeDate"
@@ -86,10 +86,10 @@ public class BoardDAO {
 		return 0;
 	}
 	
-	public void insertNewArticle(ArticleVO article) {
+	public int insertNewArticle(ArticleVO article) {
+		int articleNO = getNewArticleNO();
 		try {
 			conn=dataFactory.getConnection();
-			int articleNO = getNewArticleNO();
 			int parentNO = article.getParentNO();
 			String title = article.getTitle();
 			String content =article.getContent();
@@ -113,6 +113,7 @@ public class BoardDAO {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		return articleNO;
 	}
 	
 }
